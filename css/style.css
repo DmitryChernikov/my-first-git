@@ -1,5 +1,14 @@
-#head {
-	background: gray;
-	width: 900px;
-	height: 100px;
+.container {
+	background: #ccc;
+	width: 100%;
+
+	text-align: center;
+}
+
+.head {
+	font-family: "PT Sans", Arial;
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 }
