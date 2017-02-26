@@ -1,0 +1,45 @@
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {
+    float:none;  
+}
+
+.input-group {
+    margin-top: 30px;  
+}
+
+.panel {
+    margin-top: 50px;
+}
+
+.checkbox {
+    height: 30px;
+    font-size: 16px;
+}
+
+#task {
+    display: inline-block;
+ 
+}
+
+#label {
+    text-decoration: line-through;
+}
+
+.close {
+    margin: -10px 1px 5px 5px;
+    color: red;
+
+}
+
+.checkbox .close {
+    display: none;
+}
+
+.checkbox:hover .close {
+    display: inline;
+}
