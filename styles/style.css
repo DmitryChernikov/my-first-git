@@ -42,4 +42,5 @@
 
 .checkbox:hover .close {
     display: inline;
+    color: red;
 }
