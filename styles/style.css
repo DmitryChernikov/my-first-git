@@ -1,5 +1,4 @@
 .navbar-header {
-    float: left;
     padding: 15px;
     text-align: center;
     width: 100%;
@@ -8,39 +7,37 @@
     float:none;  
 }
 
-.input-group {
+.input-task {
     margin-top: 30px;  
 }
 
-.panel {
+.task-block {
     margin-top: 50px;
 }
 
-.checkbox {
+.task-row {
     height: 30px;
     font-size: 16px;
 }
 
-#task {
-    display: inline-block;
- 
-}
-
-#label {
-    text-decoration: line-through;
-}
 
 .close {
     margin: -10px 1px 5px 5px;
     color: red;
-
+    float: right;
 }
 
-.checkbox .close {
+.task-row .close {
     display: none;
 }
 
-.checkbox:hover .close {
+.task-row:hover .close {
     display: inline;
     color: red;
+    cursor: pointer;
+}
+
+.chekon label {
+    text-decoration: line-through;
+    color: #ddd;
 }

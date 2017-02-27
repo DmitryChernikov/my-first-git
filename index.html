@@ -27,15 +27,13 @@
                 </div>
             </div>
         </nav>
-
+       
         <form>
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="New task...">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-success">Success</button>
-                        </div>
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="input-group input-task">
+                    <input type="text" class="form-control" placeholder="New task...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-success save">Save</button>
                     </div>
                 </div>
             </div>
@@ -43,21 +41,27 @@
 
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <div class="panel panel-default">
+                <div class="panel panel-default task-block">
                     <div class="panel-body">
-                        <div class="checkbox">
-                            <label id="label"><input type="checkbox" value="">Learn HTML</label>
-                            <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <div class="checkbox task-row">
+                            <label><input type="checkbox" id="chek1" value="">Learn HTML</label>
+                            <button class="close" type="button">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
                         </div>
                         <hr>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">Learn JQuery</label>
-                            <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <div class="checkbox task-row">
+                            <label class="lal"><input type="checkbox" value="">Learn JQuery</label>
+                            <button class="close" type="button">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
                         </div>
                         <hr>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">Meet Angular</label>
-                            <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        <div class="checkbox task-row">
+                            <label><input class="ch" type="checkbox" value="">Meet Angular</label>
+                            <button class="close" type="button">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -65,10 +69,19 @@
         </div>
 
 
+
+        <!--<script>
+                $("save").click(function(){
+                    $("task-block").append("task-row");
+                });
+        </script>-->
+
+
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="js/bootstrap.js"></script>
+            <script src="js/bootstrap.js"></script>         
             <script src="scripts/common.js"></script>
+
 </body>
 </html>
