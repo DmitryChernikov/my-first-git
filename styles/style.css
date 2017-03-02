@@ -1,3 +1,4 @@
+
 .navbar-header {
     padding: 15px;
     text-align: center;
@@ -7,37 +8,48 @@
     float:none;  
 }
 
-.input-task {
-    margin-top: 30px;  
-}
 
 .task-block {
     margin-top: 50px;
 }
 
 .task-row {
-    height: 30px;
-    font-size: 16px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-row:last-child {
+     border-bottom: none;
 }
 
 
-.close {
-    margin: -10px 1px 5px 5px;
-    color: red;
-    float: right;
-}
 
 .task-row .close {
+    margin-top: -7px;
     display: none;
+    color: red;
+    transition: .9s;
+    cursor: pointer;
 }
 
 .task-row:hover .close {
     display: inline;
-    color: red;
-    cursor: pointer;
+
+}
+
+#newTask {
+    position: relative;
+    margin-top: 30px;
 }
 
 .chekon label {
     text-decoration: line-through;
     color: #ddd;
+}
+
+#newTask .error-message {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    color: red;
 }

@@ -19,69 +19,60 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-    <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand">To Do</a>
-                </div>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">To Do</a>
             </div>
-        </nav>
-       
-        <form>
-            <div class="col-sm-6 col-sm-offset-3">
-                <div class="input-group input-task">
-                    <input type="text" class="form-control" placeholder="New task...">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-success save">Save</button>
-                    </div>
-                </div>
-            </div>
-        </form>
+        </div>
+    </nav>
 
+    <form>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <div class="panel panel-default task-block">
-                    <div class="panel-body">
-                        <div class="checkbox task-row">
-                            <label><input type="checkbox" id="chek1" value="">Learn HTML</label>
-                            <button class="close" type="button">
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <hr>
-                        <div class="checkbox task-row">
-                            <label class="lal"><input type="checkbox" value="">Learn JQuery</label>
-                            <button class="close" type="button">
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <hr>
-                        <div class="checkbox task-row">
-                            <label><input class="ch" type="checkbox" value="">Meet Angular</label>
-                            <button class="close" type="button">
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </button>
-                        </div>
+                <div class="input-group input-task" id="newTask">
+                    <input type="text" id="input1" class="form-control" placeholder="New task...">
+                    <div class="input-group-btn">
+                        <button id="save-btn" type="button" class="btn btn-success">Save</button>
                     </div>
                 </div>
             </div>
         </div>
+    </form>
 
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-default task-block">
+                <div class="panel-body" id="tasks-container">
+                    <div class="checkbox task-row">
+                        <label>
+                            <input type="checkbox" class="chek" value="">Learn HTML
+                        </label>
+                        <i class="fa fa-times close" aria-hidden="true"></i>
+                    </div>
+                    <div class="checkbox task-row">
+                        <label class="lal">
+                            <input type="checkbox" class="chek" value="">Learn JQuery
+                        </label>
+                        <i class="fa fa-times close" aria-hidden="true"></i>
+                    </div>
+                    <div class="checkbox task-row">
+                        <label>
+                            <input class="chek" type="checkbox" value="">Meet Angular
+                        </label>
+                        <i class="fa fa-times close" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-        <!--<script>
-                $("save").click(function(){
-                    $("task-block").append("task-row");
-                });
-        </script>-->
-
-
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="js/bootstrap.js"></script>         
-            <script src="scripts/common.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="scripts/common.js"></script>
 
 </body>
 </html>
