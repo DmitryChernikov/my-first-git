@@ -1,4 +1,5 @@
-﻿
+﻿taskService.getTasks();
+
     $(document).on("click", ".chek", function () {
         $(this).parents(".task-row").toggleClass("chekon");
     });
