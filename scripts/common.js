@@ -5,30 +5,43 @@
     });
 
     $(document).on("click", ".close", function () {
+        var taskId = $(this).parents('.task-row').data('taskid');
+
         $(this).parents(".task-row").remove();
+
+        if (taskId != undefined) {
+            taskService.deleteTask(taskId);
+        }
+    });
+
+
+    $("#save-btn").click(function () {
+        var container = $("#tasks-container");
+        var title = $("#input1").val();
+        if (title.trim() !== '') {
+            var task = {
+                title: title
+            };
+
+            taskService.addTask(task);
+
+            $('#input1').val('');
+
+            
+        } else {
+            showErrorMessage('Please enter the task title');
+        }
     })
 
     $('#input1').keydown(function () {
         $('.error-message').remove();
     })
 
-    $("#save-btn").click(function () {
-        var text1 = $("#input1").val();
-        var container = $("#tasks-container");
-        if (text1.trim() !== '') {
-            var element = buildTask(text1);
-            container.append(element);
-            $('#input1').val('');
-        } else {
-            showErrorMessage('Please enter the task title');
-        }
-    })
-
-    function buildTask(text1) {
-        var el = '<div class="checkbox task-row"><label><input type="checkbox" value="" class="chek">'+text1+'</label>'
+    function buildTask(task) {
+        var el = '<div class="checkbox task-row' + (task.isDone ? ' chekon' : '') + '"data-taskid=' + task.id + '><label><input type="checkbox" value="" class="chek">' + task.title + '</label>'
         el += '<i class="fa fa-times close" aria-hidden="true"></i></div>';
 
-        return el;
+        $('#tasks-container').append(el);
     }
 
     function showErrorMessage(message) {
